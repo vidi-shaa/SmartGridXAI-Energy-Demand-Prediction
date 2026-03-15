@@ -1,69 +1,31 @@
 # SmartGridXAI: Explainable AI for Electricity Consumption Prediction
 
-Overview:-
-SmartGridXAI is a machine learning project that predicts electricity consumption using smart meter and environmental data. The system integrates predictive modelling with explainable AI techniques to understand the factors influencing energy demand.
-The project demonstrates an end-to-end data analytics workflow using Python and RapidMiner, along with explainability techniques such as SHAP and LIME.
+AI and machine learning are used to build a predictive model of electricity consumption based on smart meter data and environmental factors (e.g., temperature, humidity). The model will use these inputs to predict energy consumption driven by various factors. The project uses Python and RapidMiner to implement an end-to-end workflow, including predictive modelling with machine learning and explaining model output using explainable AI (EAI) techniques (SHAP and LIME). 
 
-Problem Statement:-
-Electricity consumption fluctuates due to environmental conditions and historical usage patterns. Accurate forecasting of electricity demand is essential for efficient energy management, smart grid planning, and sustainability.
-This project builds a predictive model to estimate electricity consumption while providing interpretable insights into the factors driving the predictions.
+Electricity consumption rates can vary widely depending on external conditions and a user's historical use of their electrical service. To provide the necessary forecasts for effective energy management, smart grid infrastructure planning, and sustainable energy use, an accurate estimate of electricity consumption is required. The goal of this project is to create a predictive model that provides interpretable insights into how it arrives at its predictions.
 
-Dataset:-
-The dataset contains 5000 records of smart meter data with the following features:
-Temperature
-Humidity
-Wind Speed
-Average Past Consumption
-Hour of the Day
-Day of the Week
-Target variable:
-Electricity_Consumed
+The data for this project consists of about 5000 rows of smart meter data with the following features: 
+Temperature, Humidity, Wind Speed, Average Daily/Weekly Historical Usage, Current Hour, and Current Day. The target variable is (Electricity Consumed).
 
-Methodology:-
-1. Data Preprocessing
-Timestamp converted into Hour and DayOfWeek
-Removal of irrelevant features
-Encoding of categorical variables
-Train-test split of the dataset
-2. Machine Learning Model
-A Random Forest Regressor is used to predict electricity consumption because it can capture nonlinear relationships between variables.
-3. Model Evaluation
-The model is evaluated using:
-Mean Squared Error (MSE)
-Mean Absolute Error (MAE)
-R² Score
+The data preprocessing steps included: 
+- Timestamp converted to Hour and DayOfWeek
+- Removed irrelevant features 
+- Categorical features were coded for processing in a machine learning model 
+- The final data was split into two datasets, one for training purposes and one for testing.
 
-Explainable AI:-
-To improve the interpretability of predictions, the project uses:
-SHAP (SHapley Additive Explanations)
-Identifies the global importance of the features that affect electricity demand.
-LIME (Local Interpretable Model-Agnostic Explanations)
-Explains individual predictions made by the model.
-These techniques help understand which factors most strongly influence electricity consumption.
+The method for predicting electricity consumption used a Random Forest Regressor. This model can capture non-linear relationships among features and the target variable, while providing interpretable insights into which features are available to explain the predictions.
 
-Results:-
-Key insights from the model:
-Average Past Consumption is the strongest predictor of electricity usage.
-Weather variables, such as temperature and humidity, also affect electricity demand.
-Temporal features such as hour and day of the week influence consumption patterns.
+The model evaluation is completed using three Key Performance Indicators (KPIs): 
+MSE (Mean Squared Error), MAE (Mean Absolute Error), and R² (Coefficient of Determination).
 
-Project Architecture:-
-Dataset
-↓
-Data Preprocessing
-↓
-Random Forest Model
-↓
-Energy Demand Prediction
-↓
-Explainable AI (SHAP + LIME)
+Explainable AI: 
+To provide interpretability of the model predictions, we employed SHAP (SHapley Additive Explanations) for determining feature significance across the entire data set as well as LIME (Local Interpretable Model-Agnostic Explanations) for providing insight into individual model predictions. Therefore, we can determine which independent variables contribute most to total electricity consumption.
 
-Technologies Used:-
-Python
-Scikit-learn
-SHAP
-LIME
-Pandas
-Matplotlib
-Seaborn
-RapidMiner
+Findings: 
+The key findings from our model were; Average prior consumption is the number one predictor of electricity consumption, and various types of weather (temperature and humidity) affect overall consumption. Also, time-dependent factors (e.g., hour and day of the week) correlate with the amount of power consumed during those periods.
+
+Overall Project Architecture: 
+Data Source → Data Preparation → Random Forest Machine Learning → Electricity Consumption Forecasting → Explainable AI Methods (SHAP and LIME)
+
+Technologies: 
+The software used in this project was Python, Scikit-learn, SHAP, LIME, Pandas, Matplotlib, Seaborn, and RapidMiner.
