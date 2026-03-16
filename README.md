@@ -18,6 +18,8 @@ The method for predicting electricity consumption used a Random Forest Regressor
 The model evaluation is completed using three Key Performance Indicators (KPIs): 
 MSE (Mean Squared Error), MAE (Mean Absolute Error), and R² (Coefficient of Determination).
 
+The application interface and dashboard environment were designed using Mendix. The platform enables the creation of interactive dashboards and decision-support workflows that allow users to monitor electricity consumption patterns and interpret machine learning predictions effectively.
+
 Explainable AI: 
 To provide interpretability of the model predictions, we employed SHAP (SHapley Additive Explanations) for determining feature significance across the entire data set as well as LIME (Local Interpretable Model-Agnostic Explanations) for providing insight into individual model predictions. Therefore, we can determine which independent variables contribute most to total electricity consumption.
 
